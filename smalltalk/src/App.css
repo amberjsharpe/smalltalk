@@ -40,4 +40,16 @@ h2 {
     font-weight: bold !important;
 }
 
+h3 {
+    font-family: 'Open Sans' !important;
+    font-size: 26px !important;
+    font-weight: bold !important;
+}
+
+h4 {
+    font-family: 'Open Sans' !important;
+    font-size: 11px !important;
+    text-decoration: underline;
+}
+
 

@@ -12,7 +12,7 @@ class Login extends Component {
                         <img src={logo} alt="smalltalk logo"/>
                         <h1 className="logoName pb-5">SmallTalk</h1>
                     </div>
-                    <h2 className="pt-5">Ready, set, let's chat!</h2>
+                    <h3 className="pt-5">Ready, set, let's chat!</h3>
                 </div>
                 <button className="stickToBottom longBtn backgroundYellow">
                     <h2>LOGIN</h2>

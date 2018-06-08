@@ -6,6 +6,7 @@ class Events extends Component {
         return(
             <div>
                 <Header />
+                <h3>Where are you going?</h3>
             </div>
         )
     }
