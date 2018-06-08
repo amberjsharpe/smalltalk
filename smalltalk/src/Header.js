@@ -13,7 +13,7 @@ class Header extends Component {
                     <img src={logo} alt="logo"/>
                     <div>
                     <img className="userHeader" src={headshot} alt="user image"/>
-                    <h3 className="pl-1">LOGOUT</h3>
+                    <h3 className="pl-2">LOGOUT</h3>
                     </div>
                 </header>
             </div>
