@@ -11,7 +11,10 @@ class Header extends Component {
             <div className="pt-4 pr-4 pl-4">
                 <header className="d-flex justify-content-between header">
                     <img src={logo} alt="logo"/>
+                    <div>
                     <img className="userHeader" src={headshot} alt="user image"/>
+                    <h3 className="pl-1">LOGOUT</h3>
+                    </div>
                 </header>
             </div>
         )
