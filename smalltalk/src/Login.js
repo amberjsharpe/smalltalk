@@ -8,8 +8,8 @@ class Login extends Component {
         return(
             <div>
                 <div className="d-flex flex-column align-items-center">
-                    <div className="pt-5">
-                        <img className="largeLogo" src={logo} alt="smalltalk logo"/>
+                    <div className="login pt-5">
+                        <img src={logo} alt="smalltalk logo"/>
                         <h1 className="logoName pb-5">SmallTalk</h1>
                     </div>
                     <h2 className="pt-5">Ready, set, let's chat!</h2>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import headshot from './images/headshot.jpg';
-import './home.css';
+import './user.css';
 
 class Home extends Component {
     render() {

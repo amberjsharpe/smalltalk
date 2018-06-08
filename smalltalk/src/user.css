@@ -1,9 +1,11 @@
-.login img {
+.home img {
     width: 200px;
     height: 200px;
+    border-radius: 50%;
 }
 
-.header img {
+.userHeader {
     width: 65px;
     height: 65px;
+    border-radius: 50%;
 }
