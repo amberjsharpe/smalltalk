@@ -1,0 +1,10 @@
+.longButton {
+    width: 100%;
+    height: 65px;
+    font-size: 28px;
+}
+
+.stickToBottom {
+    position: absolute;
+    bottom: 0;
+}
