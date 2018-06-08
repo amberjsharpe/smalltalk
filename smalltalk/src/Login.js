@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import logo from './images/whitespeech.png';
 
 class Login extends Component {
     render() {
-        <div>
-
-        </div>
-        
+        return(
+            <div>
+                <img src={logo}/>
+            </div>
+        )
     }
 }
 
