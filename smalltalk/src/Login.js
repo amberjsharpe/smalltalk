@@ -15,7 +15,7 @@ class Login extends Component {
                     <h2 className="pt-5"><strong>Ready, set, let's chat!</strong></h2>
                 </div>
                 <button className="stickToBottom longBtn backgroundYellow">
-                    <strong>LOGIN</strong>
+                    <h2><strong>LOGIN</strong></h2>
                 </button>   
             </div>
         )

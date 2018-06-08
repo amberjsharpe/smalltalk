@@ -4,11 +4,13 @@ body, html {
     padding: 0;
 }
 
+/* Stick to Bottom */
 .stickToBottom {
     position: absolute;
     bottom: 0;
 }
 
+/* Background Colors */
 .backgroundYellow {
     background-color: #FFFF00;
 }
@@ -23,6 +25,17 @@ body, html {
 
 .backgroundGray {
     background-color: #ACADBC;
+}
+
+/* Fonts */
+h1 {
+    font-family: 'Maven Pro' !important;
+    font-size: 48px !important;
+}
+
+h2 {
+    font-family: 'Open Sans' !important;
+    font-size: 28px !important;
 }
 
 

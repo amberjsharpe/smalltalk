@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Home extends Component {
     render() {
         return(
-            <div>
+            <div className="d-flex flex-column align-items-center">
                 <button className="mediumBtn backgroundYellow">
                     <strong>FIND SMALL TALK</strong>
                 </button>
