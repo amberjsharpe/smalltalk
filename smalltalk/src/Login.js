@@ -14,7 +14,7 @@ class Login extends Component {
                     </div>
                     <h2 className="pt-5"><strong>Ready, set, let's chat!</strong></h2>
                 </div>
-                <button className="stickToBottom longButton backgroundYellow">
+                <button className="stickToBottom longBtn backgroundYellow">
                     <strong>LOGIN</strong>
                 </button>   
             </div>

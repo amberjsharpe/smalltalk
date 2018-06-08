@@ -4,6 +4,25 @@ body, html {
     padding: 0;
 }
 
+.stickToBottom {
+    position: absolute;
+    bottom: 0;
+}
+
 .backgroundYellow {
     background-color: #FFFF00;
 }
+
+.backgroundRed {
+    background-color: #F25757;
+}
+
+.backgroundPurple {
+    background-color: #7189FF;
+}
+
+.backgroundGray {
+    background-color: #ACADBC;
+}
+
+
