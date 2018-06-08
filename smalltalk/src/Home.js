@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import headshot from './images/headshot.jpg';
+import './user.css';
 
 class Home extends Component {
     render() {
         return(
             <div className="d-flex flex-column align-items-center">
+                <img src={headshot} alt="user image"/>
                 <button className="mediumBtn backgroundYellow">
                     <strong>FIND SMALL TALK</strong>
                 </button>
