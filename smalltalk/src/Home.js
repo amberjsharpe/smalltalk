@@ -1,24 +1,31 @@
 import React, { Component } from 'react';
 import headshot from './images/headshot.jpg';
-import './user.css';
+import './home.css';
 
 class Home extends Component {
     render() {
         return(
-            <div className="d-flex flex-column align-items-center">
-                <img src={headshot} alt="user image"/>
-                <button className="mediumBtn backgroundYellow">
-                    <strong>FIND SMALL TALK</strong>
-                </button>
+            <div className="d-flex flex-column align-items-center home">
+                <div className="pt-5">
+                    <img src={headshot} alt="user image"/>
+                </div>
+                <div className="pt-3">
+                    <h2>Hello, Amber!</h2>
+                </div>
+                <div className="pt-5">
+                    <button className="mediumBtn backgroundYellow">
+                        <strong>FIND SMALL TALK</strong>
+                    </button>
+                </div>
                 <div className="stickToBottom">
                     <button className="longBtn backgroundRed">
-                        <strong>FAVORITES</strong>
+                        <h2>FAVORITES</h2>
                     </button>
                     <button className="longBtn backgroundPurple">
-                        <strong>EVENTS</strong>
+                        <h2>EVENTS</h2>
                     </button>
                     <button className="longBtn backgroundGray">
-                        <strong>LOGOUT</strong>
+                        <h2>LOGOUT</h2>
                     </button>
                 </div>   
             </div>

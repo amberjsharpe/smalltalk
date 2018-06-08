@@ -31,11 +31,13 @@ body, html {
 h1 {
     font-family: 'Maven Pro' !important;
     font-size: 48px !important;
+    font-weight: bold !important;
 }
 
 h2 {
     font-family: 'Open Sans' !important;
     font-size: 28px !important;
+    font-weight: bold !important;
 }
 
 
