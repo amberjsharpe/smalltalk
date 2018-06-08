@@ -12,10 +12,10 @@ class Login extends Component {
                         <img className="largeLogo" src={logo} alt="smalltalk logo"/>
                         <h1 className="logoName pb-5">SmallTalk</h1>
                     </div>
-                    <h2 className="pt-5"><strong>Ready, set, let's chat!</strong></h2>
+                    <h2 className="pt-5">Ready, set, let's chat!</h2>
                 </div>
-                <button className="stickToBottom longButton backgroundYellow">
-                    <strong>LOGIN</strong>
+                <button className="stickToBottom longBtn backgroundYellow">
+                    <h2>LOGIN</h2>
                 </button>   
             </div>
         )

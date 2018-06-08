@@ -4,6 +4,40 @@ body, html {
     padding: 0;
 }
 
+/* Stick to Bottom */
+.stickToBottom {
+    position: absolute;
+    bottom: 0;
+}
+
+/* Background Colors */
 .backgroundYellow {
     background-color: #FFFF00;
 }
+
+.backgroundRed {
+    background-color: #F25757;
+}
+
+.backgroundPurple {
+    background-color: #7189FF;
+}
+
+.backgroundGray {
+    background-color: #ACADBC;
+}
+
+/* Fonts */
+h1 {
+    font-family: 'Maven Pro' !important;
+    font-size: 48px !important;
+    font-weight: bold !important;
+}
+
+h2 {
+    font-family: 'Open Sans' !important;
+    font-size: 28px !important;
+    font-weight: bold !important;
+}
+
+
