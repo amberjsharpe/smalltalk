@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
+import Categorybtn from './Categorybtn';
 
 class Events extends Component {
     render() {
@@ -7,6 +8,7 @@ class Events extends Component {
             <div>
                 <Header />
                 <h3 className="pt-4 pl-3">Where are you going?</h3>
+                <Categorybtn />
             </div>
         )
     }
