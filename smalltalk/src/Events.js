@@ -9,7 +9,14 @@ class Events extends Component {
             <div>
                 <Header />
                 <h3 className="pt-4 pl-3 pb-4">Where are you going?</h3>
-                <Categorybtn src={party} alt="party hat" category="Party"/>
+                <div className="d-flex flex-wrap">
+                    <Categorybtn src={party} alt="party hat" category="Party"/>
+                    <Categorybtn src={party} alt="party hat" category="Party"/>
+                    <Categorybtn src={party} alt="party hat" category="Party"/>
+                    <Categorybtn src={party} alt="party hat" category="Party"/>
+                    <Categorybtn src={party} alt="party hat" category="Party"/>
+                    <Categorybtn src={party} alt="party hat" category="Party"/>
+                </div>
             </div>
         )
     }
