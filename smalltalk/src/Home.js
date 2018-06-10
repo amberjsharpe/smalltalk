@@ -13,7 +13,7 @@ class Home extends Component {
                     <h2>Hello, Amber!</h2>
                 </div>
                 <div className="pt-5">
-                    <button className="mediumBtn backgroundYellow">
+                    <button className="mediumBtn backgroundYellow boxShadow">
                         <strong>FIND SMALL TALK</strong>
                     </button>
                 </div>
