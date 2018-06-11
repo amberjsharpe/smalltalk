@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { googleProvider, rebase } from './base';
+import Home from './Home';
 import './button.css';
 
 class Loginbtn extends Component {
@@ -20,7 +21,6 @@ class Loginbtn extends Component {
         const {loggedin} = this.state;
         console.log(this.state);
         const {logState} = this.props;
-        console.log("props", this.props);
     }
 
     saveUser (user) {
@@ -41,11 +41,10 @@ class Loginbtn extends Component {
 		return rebase.initializedApp.auth().signInWithPopup(googleProvider)
 		.then((data) => {
 			this.saveUser(data.user);
-		});
+		})
 	}
 
     render() {
-
         return(
             <button onClick={this.loginWithGoogle} className="stickToBottom longBtn backgroundYellow">
                 <h2>LOGIN</h2>
