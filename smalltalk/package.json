@@ -4,8 +4,11 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.1",
+    "firebase": "^5.0.4",
+    "re-base": "^3.2.3",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-rebase": "^1.0.5",
     "react-scripts": "1.1.4"
   },
   "scripts": {
@@ -13,5 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "rebase": "^0.3.0"
   }
 }
