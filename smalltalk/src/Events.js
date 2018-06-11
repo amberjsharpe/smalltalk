@@ -13,14 +13,19 @@ class Events extends Component {
         return(
             <div>
                 <Header />
-                <h3 className="pt-4 pl-3 pb-4">Where are you going?</h3>
-                <div className="pr-1 pl-1 d-flex flex-wrap justify-content-around">
-                    <Categorybtn src={party} alt="party hat" category="Party"/>
-                    <Categorybtn src={network} alt="circles connected by lines" category="Networking Event"/>
-                    <Categorybtn src={champagne} alt="champagne" category="Date"/>
-                    <Categorybtn src={family} alt="family" category="Family Gathering"/>
-                    <Categorybtn src={coffee} alt="coffee pot" category="Break Room"/>
-                    <Categorybtn src={train} alt="light rail train" category="Morning Commute"/>
+                <div className="d-flex flex-column align-items-center">
+                    <h3 className="pt-3 pb-3">Where are you going?</h3>
+                    <div className="d-flex flex-wrap justify-content-around">
+                        <Categorybtn src={party} alt="party hat" category="Party"/>
+                        <Categorybtn src={network} alt="circles connected by lines" category="Networking Event"/>
+                        <Categorybtn src={champagne} alt="champagne" category="Date"/>
+                        <Categorybtn src={family} alt="family" category="Family Gathering"/>
+                        <Categorybtn src={coffee} alt="coffee pot" category="Break Room"/>
+                        <Categorybtn src={train} alt="light rail train" category="Morning Commute"/>
+                    </div>
+                    <button className="mediumBtn backgroundYellow boxShadow">
+                        <strong>SUBMIT</strong>
+                    </button>
                 </div>
             </div>
         )
