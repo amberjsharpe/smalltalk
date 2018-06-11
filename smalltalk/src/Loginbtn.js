@@ -18,12 +18,13 @@ class Loginbtn extends Component {
 
     submitState() {
         const {loggedin} = this.state;
-        console.log(this.props);
+        console.log(this.state);
         const {logState} = this.props;
+        console.log("props", this.props);
     }
 
     saveUser (user) {
-        return rebase.initializedApp.database().ref().child(`${user.uid}/info`)
+        return rebase.initializedApp.database().ref().child(`${user.uid}/user`)
         .update({
             email: user.email,
             uid: user.uid
