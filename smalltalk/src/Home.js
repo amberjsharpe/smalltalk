@@ -7,7 +7,7 @@ class Home extends Component {
         return(
             <div className="d-flex flex-column align-items-center home">
                 <div className="pt-5">
-                    <img src={headshot} alt="user image"/>
+                    <img src={headshot} alt="user"/>
                 </div>
                 <div className="pt-3">
                     <h2>Hello, Amber!</h2>

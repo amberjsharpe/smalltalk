@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './images/whitespeech.png';
 import './logo.css';
-import './button.css';
+import Loginbtn from './Loginbtn';
 
 class Login extends Component {
     render() {
@@ -14,9 +14,7 @@ class Login extends Component {
                     </div>
                     <h3 className="pt-5">Ready, set, let's chat!</h3>
                 </div>
-                <button className="stickToBottom longBtn backgroundYellow">
-                    <h2>LOGIN</h2>
-                </button>   
+                <Loginbtn />
             </div>
         )
     }
