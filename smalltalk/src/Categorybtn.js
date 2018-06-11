@@ -6,7 +6,7 @@ class Categorybtn extends Component {
         return(
             <div className="categorybtn boxShadow d-flex flex-column align-items-center">
                 <img src={this.props.src} alt={this.props.alt}/>
-                <h3>{this.props.category}</h3>
+                <h4>{this.props.category}</h4>
             </div>
         )
     }
