@@ -12,14 +12,8 @@ class Loginbtn extends Component {
             loggedin: ''
         }
 
-        this.submitState = this.submitState.bind(this);
         this.saveUser = this.saveUser.bind(this);
         this.loginWithGoogle = this.loginWithGoogle.bind(this);
-    }
-
-    submitState() {
-        const {loggedin} = this.state;
-        console.log(this.state.loggedin);
     }
 
     saveUser (user) {
@@ -32,9 +26,8 @@ class Loginbtn extends Component {
         })
         .then(() => {
             this.setState({
-                loggedin: user
+                loggedin: user.uid
             });
-            return this.submitState();
         })
     }
 
