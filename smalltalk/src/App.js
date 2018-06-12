@@ -14,7 +14,7 @@ class App extends Component {
    
     this.state = {
       loggedin: '',
-      authed: false
+      authed: false,
     }
 
     this.saveUser = this.saveUser.bind(this);
@@ -33,9 +33,10 @@ class App extends Component {
     .then(() => {
         this.setState({
             loggedin: user.uid,
-            authed: true
+            authed: true,
+            user: user
         });
-        console.log(this.state.authed === true)
+        console.log(this.state)
     })
   } 
 
@@ -47,7 +48,7 @@ class App extends Component {
       })
   }
 
-  render() {
+  render(props) {
 
         if (this.state.authed === false) {
         return (
@@ -67,7 +68,7 @@ class App extends Component {
         </div>
     )} else if (this.state.authed === true) {
       return (
-        <User />
+        <User user={this.state.user}/>
       )
     }
   } 
