@@ -4,16 +4,15 @@ import './user.css';
 
 class User extends Component {
 
-    render() {
+    render(props) {
         console.log(this.props)
-
         return(
             <div className="d-flex flex-column align-items-center home">
                 <div className="pt-5">
-                    <img src={headshot} alt="user"/>
+                    <img src={this.props.user.photoURL} alt="user"/>
                 </div>
                 <div className="pt-3">
-                    <h2>Hello, Amber!</h2>
+                    <h2>Hello, {this.props.user.displayName}!</h2>
                 </div>
                 <div className="pt-5">
                     <button className="mediumBtn backgroundYellow boxShadow">
