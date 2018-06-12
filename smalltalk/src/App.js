@@ -48,27 +48,24 @@ loginWithGoogle() {
 }
 
   render() {
-    console.log(this.state.authed === true)
 
-    if (this.state.authed === false) {
-         return (
-          <div className="App">
-              <div>
-                  <div className="d-flex flex-column align-items-center">
-                      <div className="login pt-5">
-                          <img src={logo} alt="smalltalk logo"/>
-                          <h1 className="logoName pb-5">SmallTalk</h1>
-                      </div>
-                      <h3 className="pt-5">Ready, set, let's chat!</h3>
-                  </div>
-              </div>
-              <button onClick={this.loginWithGoogle} className="stickToBottom longBtn backgroundYellow">
-                  <h2>LOGIN</h2>
-              </button>
-          </div>
-      )
-    } 
-  }
+        return (
+        <div className="App">
+            <div>
+                <div className="d-flex flex-column align-items-center">
+                    <div className="login pt-5">
+                        <img src={logo} alt="smalltalk logo"/>
+                        <h1 className="logoName pb-5">SmallTalk</h1>
+                    </div>
+                    <h3 className="pt-5">Ready, set, let's chat!</h3>
+                </div>
+            </div>
+            <button onClick={this.loginWithGoogle} className="stickToBottom longBtn backgroundYellow">
+                <h2>LOGIN</h2>
+            </button>
+        </div>
+    )
+  } 
 }
 
 export default App;
