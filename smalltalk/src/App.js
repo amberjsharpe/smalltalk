@@ -48,7 +48,7 @@ loginWithGoogle() {
 }
 
   render() {
-
+        if (this.state.authed === false) {
         return (
         <div className="App">
             <div>
@@ -64,7 +64,11 @@ loginWithGoogle() {
                 <h2>LOGIN</h2>
             </button>
         </div>
-    )
+    )} else if (this.state.authed === true) {
+      return (
+        <User />
+      )
+    }
   } 
 }
 
