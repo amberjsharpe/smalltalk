@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import headshot from './images/headshot.jpg';
 import './user.css';
 
-class Home extends Component {
+class User extends Component {
+
     render() {
+
         return(
             <div className="d-flex flex-column align-items-center home">
                 <div className="pt-5">
@@ -27,10 +29,10 @@ class Home extends Component {
                     <button className="longBtn backgroundGray">
                         <h2>LOGOUT</h2>
                     </button>
-                </div>   
+                </div>
             </div>
         )
     }
 }
 
-export default Home
+export default User
