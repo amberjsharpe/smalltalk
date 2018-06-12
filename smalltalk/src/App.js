@@ -5,7 +5,6 @@ import {
   Link
 } from 'react-router-dom';
 import { googleProvider, rebase } from './base';
-import Loginbtn from './Loginbtn';
 import Home from './Home';
 import logo from './images/whitespeech.png';
 import './App.css';
@@ -26,6 +25,7 @@ class App extends Component {
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
   }
 
+  // Saves user to Firebase and sets state to logged in based on uid
   saveUser (user) {
       return rebase.initializedApp.database().ref().child(`${user.uid}/user`)
       .update({
@@ -42,6 +42,7 @@ class App extends Component {
       })
   }
 
+  // Logins into app using Google Popup sign-in and renders saveUser() with user info 
   loginWithGoogle() {
   return rebase.initializedApp.auth().signInWithPopup(googleProvider)
   .then((data) => {
@@ -64,7 +65,6 @@ class App extends Component {
               <button onClick={this.loginWithGoogle} className="stickToBottom longBtn backgroundYellow">
                 <h2>LOGIN</h2>
               </button>
-              <Route path="/home" component={Home}/>
           </div>
         </div>
       </Router>
