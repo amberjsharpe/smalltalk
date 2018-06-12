@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './user.css';
 
 class User extends Component {
+
 
     render(props) {
         console.log(this.props)
@@ -15,7 +17,7 @@ class User extends Component {
                 </div>
                 <div className="pt-5">
                     <button className="mediumBtn backgroundYellow boxShadow">
-                        <strong>FIND SMALL TALK</strong>
+                        <strong><Link to="/events">FIND SMALL TALK</Link></strong>
                     </button>
                 </div>
                 <div className="stickToBottom">

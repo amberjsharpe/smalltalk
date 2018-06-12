@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { googleProvider, rebase } from './base';
+import { Route, withRouter } from 'react-router-dom';
 import logo from './images/whitespeech.png';
 import User from './User';
+import Events from './Events';
 import './App.css';
 import './logo.css';
 import './button.css';
@@ -36,7 +38,6 @@ class App extends Component {
             authed: true,
             user: user
         });
-        console.log(this.state)
     })
   } 
 
@@ -45,12 +46,12 @@ class App extends Component {
       return rebase.initializedApp.auth().signInWithPopup(googleProvider)
       .then((data) => {
           this.saveUser(data.user);
+          this.props.history.push('/user');
       })
   }
 
   render(props) {
-
-        if (this.state.authed === false) {
+    if (this.state.authed === false) {   
         return (
         <div className="App">
             <div>
@@ -68,10 +69,13 @@ class App extends Component {
         </div>
     )} else if (this.state.authed === true) {
       return (
-        <User user={this.state.user}/>
+        <div>
+            <Route exact path="/events" component={() => <Events state={this.state}/>}/>
+            <Route exact path="/user" component={() => <User user={this.state.user}/>}/>
+        </div>
       )
     }
   } 
 }
 
-export default App;
+export default withRouter(App);
