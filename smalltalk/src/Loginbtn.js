@@ -28,6 +28,7 @@ class Loginbtn extends Component {
             this.setState({
                 loggedin: user.uid
             });
+            console.log(this.state)
         })
     }
 
