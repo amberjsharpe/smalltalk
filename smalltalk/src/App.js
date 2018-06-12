@@ -35,19 +35,20 @@ class App extends Component {
             loggedin: user.uid,
             authed: true
         });
-        console.log(this.state.authed===true)
+        console.log(this.state.authed === true)
     })
-}
+  } 
 
-// Logins into app using Google Popup sign-in and renders saveUser() with user info 
-loginWithGoogle() {
-    return rebase.initializedApp.auth().signInWithPopup(googleProvider)
-    .then((data) => {
-        this.saveUser(data.user);
-    })
-}
+  // Logins into app using Google Popup sign-in and renders saveUser() with user info 
+  loginWithGoogle() {
+      return rebase.initializedApp.auth().signInWithPopup(googleProvider)
+      .then((data) => {
+          this.saveUser(data.user);
+      })
+  }
 
   render() {
+
         if (this.state.authed === false) {
         return (
         <div className="App">
@@ -66,7 +67,7 @@ loginWithGoogle() {
         </div>
     )} else if (this.state.authed === true) {
       return (
-        <User />
+        <User user={this.props.data.user}/>
       )
     }
   } 
