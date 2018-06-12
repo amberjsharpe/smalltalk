@@ -67,7 +67,7 @@ class App extends Component {
         </div>
     )} else if (this.state.authed === true) {
       return (
-        <User user={this.props.data.user}/>
+        <User />
       )
     }
   } 
