@@ -1,51 +1,16 @@
-import React, { Component } from 'react';
-import { googleProvider, rebase } from './base';
-import Home from './Home';
-import './button.css';
+// import React, { Component } from 'react';
 
-class Loginbtn extends Component {
+// import Home from './Home';
 
-    constructor(props) {
-        super(props);
 
-        this.state = {
-            loggedin: ''
-        }
+// class Loginbtn extends Component {
 
-        this.saveUser = this.saveUser.bind(this);
-        this.loginWithGoogle = this.loginWithGoogle.bind(this);
-    }
+    
+//     render() {
+//         return(
+            
+//         )
+//     }
+// }
 
-    saveUser (user) {
-        return rebase.initializedApp.database().ref().child(`${user.uid}/user`)
-        .update({
-            email: user.email,
-            uid: user.uid, 
-            name: user.displayName, 
-            image: user.photoURL
-        })
-        .then(() => {
-            this.setState({
-                loggedin: user.uid
-            });
-            console.log(this.state)
-        })
-    }
-
-    loginWithGoogle() {
-		return rebase.initializedApp.auth().signInWithPopup(googleProvider)
-		.then((data) => {
-			this.saveUser(data.user);
-		})
-	}
-
-    render() {
-        return(
-            <button onClick={this.loginWithGoogle} className="stickToBottom longBtn backgroundYellow">
-                <h2>LOGIN</h2>
-            </button>
-        )
-    }
-}
-
-export default Loginbtn
+// export default Loginbtn
