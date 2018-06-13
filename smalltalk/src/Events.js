@@ -9,10 +9,10 @@ import network from './images/network.png';
 import train from './images/train.png';
 
 class Events extends Component {
-    render() {
+    render(props) {
         return(
             <div>
-                <Header />
+                <Header user={this.props.user}/>
                 <div className="d-flex flex-column align-items-center">
                     <h3 className="pt-3 pb-3">Where are you going?</h3>
                     <div className="d-flex flex-wrap justify-content-around">

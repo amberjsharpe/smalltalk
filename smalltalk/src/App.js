@@ -70,7 +70,7 @@ class App extends Component {
     )} else if (this.state.authed === true) {
       return (
         <div>
-            <Route exact path="/events" component={() => <Events state={this.state}/>}/>
+            <Route exact path="/events" component={() => <Events user={this.state.user} state={this.state}/>}/>
             <Route exact path="/user" component={() => <User user={this.state.user}/>}/>
         </div>
       )
