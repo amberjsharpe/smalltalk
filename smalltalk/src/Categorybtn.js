@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './categorybtn.css';
 
 class Categorybtn extends Component {
+
     render(props) {
         return(
             <div className="mb-4 categorybtn boxShadow d-flex flex-column align-items-center">
