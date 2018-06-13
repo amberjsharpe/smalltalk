@@ -21,10 +21,10 @@ class User extends Component {
                 </div>
                 <div className="stickToBottom">
                     <button className="longBtn backgroundRed">
-                        <h2>FAVORITES</h2>
+                        <h2><Link to="/user/favorites">FAVORITES</Link></h2>
                     </button>
                     <button className="longBtn backgroundPurple">
-                        <h2>EVENTS</h2>
+                        <h2><Link to="/user/events">EVENTS</Link></h2>
                     </button>
                     <button className="longBtn backgroundGray">
                         <h2 onClick={this.props.logout}>LOGOUT</h2>
