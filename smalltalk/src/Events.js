@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
 import Header from './Header';
 import Categorybtn from './Categorybtn';
 import party from './images/party.png';
@@ -15,11 +16,13 @@ import Commute from './events/Commute';
 import Break from './events/Break';
 
 class Events extends Component {
+
+
     render(props) {
-        console.log(this.props)
         return(
             <div>
-                <Header user={this.props.user} logout={this.props.logout}/>
+                <Break user={this.props.user} logout={this.props.logout}/>
+                {/* <Header user={this.props.user} logout={this.props.logout}/>
                 <div className="d-flex flex-column align-items-center">
                     <h3 className="pt-3 pb-3">Where are you going?</h3>
                     <div className="d-flex flex-wrap justify-content-around">
@@ -33,7 +36,7 @@ class Events extends Component {
                     <button className="mediumBtn backgroundYellow boxShadow">
                         <strong>SUBMIT</strong>
                     </button>
-                </div>
+                </div> */}
             </div>
         )
     }
