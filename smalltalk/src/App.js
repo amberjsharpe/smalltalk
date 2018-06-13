@@ -54,15 +54,11 @@ class App extends Component {
   logout() {
     console.log("attempted to log out");
     return rebase.initializedApp.auth().signOut()
-    .then(() => {
-        this.setState({
-            loggedin: '',
-            authed: false
-        });
-        return 
-            <div>
-                <App />
-            </div>
+        .then(() => {
+            this.setState({
+                loggedin: '',
+                authed: false
+            })
         })
     }
 
