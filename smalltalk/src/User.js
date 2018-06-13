@@ -6,7 +6,6 @@ class User extends Component {
 
 
     render(props) {
-        console.log(this.props)
         return(
             <div className="d-flex flex-column align-items-center home">
                 <div className="pt-5">
@@ -28,7 +27,7 @@ class User extends Component {
                         <h2>EVENTS</h2>
                     </button>
                     <button className="longBtn backgroundGray">
-                        <h2>LOGOUT</h2>
+                        <h2 onClick={this.props.logout}>LOGOUT</h2>
                     </button>
                 </div>
             </div>

@@ -16,11 +16,12 @@ class App extends Component {
    
     this.state = {
       loggedin: '',
-      authed: false,
+      authed: false
     }
 
     this.saveUser = this.saveUser.bind(this);
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
+    this.logout = this.logout.bind(this);
   }
 
   // Saves user to Firebase and sets state to logged in based on uid
@@ -50,6 +51,17 @@ class App extends Component {
       })
   }
 
+  logout() {
+    console.log("attempted to log out");
+    return rebase.initializedApp.auth().signOut()
+        .then(() => {
+            this.setState({
+                loggedin: '',
+                authed: false
+            })
+        })
+    }
+
   render(props) {
     if (this.state.authed === false) {   
         return (
@@ -70,8 +82,8 @@ class App extends Component {
     )} else if (this.state.authed === true) {
       return (
         <div>
-            <Route exact path="/events" component={() => <Events state={this.state}/>}/>
-            <Route exact path="/user" component={() => <User user={this.state.user}/>}/>
+            <Route exact path="/events" component={() => <Events user={this.state.user} state={this.state} logout={this.logout} />}/>
+            <Route exact path="/user" component={() => <User user={this.state.user} logout={this.logout} />}/>
         </div>
       )
     }
