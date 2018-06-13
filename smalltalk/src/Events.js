@@ -21,7 +21,7 @@ class Events extends Component {
     render(props) {
         return(
             <div>
-                <Party user={this.props.user} logout={this.props.logout}/>
+                <Break user={this.props.user} logout={this.props.logout}/>
                 {/* <Header user={this.props.user} logout={this.props.logout}/>
                 <div className="d-flex flex-column align-items-center">
                     <h3 className="pt-3 pb-3">Where are you going?</h3>

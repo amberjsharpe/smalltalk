@@ -7,9 +7,8 @@ class Party extends Component {
     render(props) {
         return(
             <div>
-                {console.log(this.props)}
                 <Header user={this.props.user} logout={this.props.logout}/>
-                <div className="d-flex">
+                <div className="d-flex pl-3">
                     <div>
                         <img src={party} alt="party hat"/>
                     </div>
