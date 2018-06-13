@@ -21,8 +21,7 @@ class Events extends Component {
     render(props) {
         return(
             <div>
-                <Break user={this.props.user} logout={this.props.logout}/>
-                {/* <Header user={this.props.user} logout={this.props.logout}/>
+                <Header user={this.props.user} logout={this.props.logout}/>
                 <div className="d-flex flex-column align-items-center">
                     <h3 className="pt-3 pb-3">Where are you going?</h3>
                     <div className="d-flex flex-wrap justify-content-around">
@@ -33,10 +32,7 @@ class Events extends Component {
                         <Categorybtn src={coffee} alt="coffee pot" category="Break Room"/>
                         <Categorybtn src={train} alt="light rail train" category="Morning Commute"/>
                     </div>
-                    <button className="mediumBtn backgroundYellow boxShadow">
-                        <strong>SUBMIT</strong>
-                    </button>
-                </div> */}
+                </div>
             </div>
         )
     }
