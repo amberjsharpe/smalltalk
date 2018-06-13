@@ -64,4 +64,10 @@ h5 {
     text-decoration: underline;
 }
 
+h6 {
+    font-family: 'Maven Pro' !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+
 
