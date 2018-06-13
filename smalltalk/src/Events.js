@@ -10,9 +10,10 @@ import train from './images/train.png';
 
 class Events extends Component {
     render(props) {
+        console.log(this.props)
         return(
             <div>
-                <Header user={this.props.user}/>
+                <Header user={this.props.user} logout={this.props.logout}/>
                 <div className="d-flex flex-column align-items-center">
                     <h3 className="pt-3 pb-3">Where are you going?</h3>
                     <div className="d-flex flex-wrap justify-content-around">

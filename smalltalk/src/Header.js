@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { googleProvider, rebase } from './base';
+import App from './App';
 import logo from './images/whitespeech.png';
 import headshot from './images/headshot.jpg';
 import './logo.css';
@@ -10,30 +11,17 @@ class Header extends Component {
 
     constructor(props) {
         super(props)
-
-        this.logout = this.logout.bind(this);
     }
 
-    logout() {
-		console.log("attempted to log out");
-		return rebase.initializedApp.auth().signOut()
-		.then(() => {
-			this.setState({
-				loggedin: ''
-			});
-			return this.submitState();
-		})
-	}
-
     render(props) {
-        console.log(this.props.user)
+        console.log(this.props)
         return(
             <div className="pt-4 pr-4 pl-4">
                 <header className="d-flex justify-content-between header">
                     <img src={logo} alt="logo"/>
                     <div>
                     <img className="userHeader" src={this.props.user.photoURL} alt="user"/>
-                    <h5 className="pl-2">LOGOUT</h5>
+                    <h5 onClick={this.logout} className="pl-2">LOGOUT</h5>
                     </div>
                 </header>
             </div>
