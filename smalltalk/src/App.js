@@ -5,6 +5,7 @@ import logo from './images/whitespeech.png';
 import User from './User';
 import Events from './Events';
 import Favorites from './Favorites';
+import Party from './events/Party';
 import Userevents from './Userevents';
 import './App.css';
 import './logo.css';
@@ -54,7 +55,6 @@ class App extends Component {
   }
 
   logout() {
-    console.log("attempted to log out");
     return rebase.initializedApp.auth().signOut()
         .then(() => {
             this.setState({
@@ -65,7 +65,7 @@ class App extends Component {
     }
 
   render(props) {
-    if (this.state.authed === false) {   
+    if (!this.state.authed) {   
         return (
         <div className="App">
             <div>
@@ -81,11 +81,12 @@ class App extends Component {
                 <h2>LOGIN</h2>
             </button>
         </div>
-    )} else if (this.state.authed === true) {
+    )} else if (this.state.authed) {
       return (
         <div>
             <Route exact path="/events" component={() => <Events user={this.state.user} state={this.state} logout={this.logout} />}/>
             <Route exact path="/user" component={() => <User user={this.state.user} logout={this.logout} />}/>
+            <Route exact path="/events/party" component={() => <Party user={this.state.user} logout={this.state.logout} />}  />
             <Route exact path="/user/favorites" component={() => <Favorites user={this.state.user} logout={this.logout} />}/>
             <Route exact path="/user/events" component={() => <Userevents user={this.state.user} logout={this.logout} />}/>
         </div>

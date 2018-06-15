@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import './user.css';
 
 class User extends Component {
-
-
     render(props) {
         return(
             <div className="d-flex flex-column align-items-center home">
