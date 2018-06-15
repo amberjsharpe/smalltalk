@@ -1,0 +1,26 @@
+[
+    {
+        "party": [
+            {
+            	"id": "pq1", 
+            	"q": "What’s the most out-of-character thing you’ve ever done?"
+            },
+            {
+                "id": "pq2",
+                "q": "What do you wish you had placed in a time capsule 15 years ago?"
+            },
+            {
+                "id": "pq3",
+                "q": "If you could teach a college course on any subject you want, what would it be?"
+            },
+            {
+                "id": "pq4",
+                "q": "What would be your ideal superpower?"
+            },
+            {
+                "id": "pq5",
+                "q": "What’s the strangest compliment you’ve ever gotten?"
+            }
+        ]
+    }
+]

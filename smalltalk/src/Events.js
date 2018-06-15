@@ -16,8 +16,6 @@ import Commute from './events/Commute';
 import Break from './events/Break';
 
 class Events extends Component {
-
-
     render(props) {
         return(
             <div>
@@ -25,7 +23,7 @@ class Events extends Component {
                 <div className="d-flex flex-column align-items-center">
                     <h3 className="pt-3 pb-3">Where are you going?</h3>
                     <div className="d-flex flex-wrap justify-content-around">
-                        <Categorybtn src={party} alt="party hat" category="Party"/>
+                        <Link to="/events/party"><Categorybtn src={party} alt="party hat" category="Party"  /></Link>
                         <Categorybtn src={network} alt="circles connected by lines" category="Networking Event"/>
                         <Categorybtn src={champagne} alt="champagne" category="Date"/>
                         <Categorybtn src={family} alt="family" category="Family Gathering"/>

@@ -10,7 +10,6 @@ class Header extends Component {
 
 
     render(props) {
-        console.log(this.props)
         return(
             <div className="pt-4 pr-4 pl-4">
                 <header className="d-flex justify-content-between header">
@@ -21,7 +20,7 @@ class Header extends Component {
                     </div>
                 </header>
                 <Switch>
-                    <Route exact path="/user" component={() => <User />} />
+                    {/* <Route exact path="/user" component={() => <User />} /> */}
                     <Route exact path="/user" component={() => <User />} />
                 </Switch>
             </div>
