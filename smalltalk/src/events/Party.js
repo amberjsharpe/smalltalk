@@ -10,7 +10,8 @@ class Party extends Component {
         super(props);
 
         this.state = {
-            party: []
+            party: [],
+            fullheart: false
         }
     }
 
@@ -48,11 +49,9 @@ class Party extends Component {
                         </div>
                 </div>    
                     <div>
-                        {console.log(this.state)}
-                        {this.state.party.map((p, index ) => {
-                            console.log(p);
-                            console.log(index);
-                            return <div><Favdiv key={p.id} q={p.q}/></div>
+                        {this.state.party.map((p, i ) => {
+                            console.log(p.id)
+                            return <div><Favdiv heart={this.state.fullheart} key={p.id} q={p.q} user={this.props.user} id={p.id} /></div>
                         })}
                     </div>
                 </div>
