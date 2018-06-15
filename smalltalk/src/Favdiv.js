@@ -31,16 +31,14 @@ class Favdiv extends Component {
 
         user = this.props.user.uid;
         question = this.props.q;
-        key = this.props.key;
 
         FBFavObj = {
            userUID: user,
-           question: question,
-           id: key
-        }     
+           question: question
+        } 
+        
+        this.SaveObjToFB('favorites', FBFavObj)
     } 
-
-
 
     render(props) {
         console.log(this.props)
@@ -49,7 +47,7 @@ class Favdiv extends Component {
             <div className="backgroundTransparent pr-3 pl-3 mt-3">
                 <p className="pt-2">{this.props.q}</p>
                 <div>
-                    <img onClick={this.favoriteSmallTalk} id={this.props.key} className="openheartBtn mr-2" src={openheart} alt="open heart" />
+                    <img onClick={this.favoriteSmallTalk(this.props)} id={this.props.key} className="openheartBtn mr-2" src={openheart} alt="open heart" />
                     <img className="plussignBtn" src={plus} alt="plus sign" />
                 </div>
             </div>
