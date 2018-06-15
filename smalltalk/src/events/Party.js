@@ -15,8 +15,9 @@ class Party extends Component {
     }
 
     componentDidMount() {
-        this.getFromFb('0').then(res => {
-            this.setState({party: res[0]});
+        this.getFromFb('party').then(res => {
+            console.log(res);
+            this.setState({party: res});
         })
     }
 
@@ -47,8 +48,10 @@ class Party extends Component {
                         </div>
                 </div>    
                     <div>
-                        {this.state.party.map(p => {
-                            return <div key={p.id}><Favdiv question={p.q} /></div>
+                        {console.log(this.state)}
+                        {this.state.party.map((p, index ) => {
+                            console.log(index);
+                            return <div><Favdiv key={p.id} state={this.state.party}/></div>
                         })}
                     </div>
                 </div>

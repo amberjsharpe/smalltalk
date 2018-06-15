@@ -5,6 +5,7 @@ import plus from './images/pluscircle.png';
 
 class Favdiv extends Component {
     render(props) {
+        console.log(this.props);
         return (
             <div className="backgroundTransparent pr-3 pl-3 mt-3">
                 <p className="pt-2">test</p>
