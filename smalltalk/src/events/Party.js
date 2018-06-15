@@ -48,8 +48,9 @@ class Party extends Component {
                         </div>
                 </div>    
                     <div>
-                        {this.state.party.map((p, index ) => {
-                            return <div><Favdiv key={p.id} q={p.q} user={this.props.user} /></div>
+                        {this.state.party.map((p, i ) => {
+                            console.log(p.id)
+                            return <div><Favdiv key={p.id} q={p.q} user={this.props.user} id={p.id} /></div>
                         })}
                     </div>
                 </div>
