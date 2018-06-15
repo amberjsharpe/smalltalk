@@ -8,12 +8,6 @@ import coffee from './images/coffee.png';
 import family from './images/family.png';
 import network from './images/network.png';
 import train from './images/train.png';
-// import Party from './events/Party';
-// import Network from './events/Network';
-// import Family from './events/Family';
-// import Date from './events/Date';
-// import Commute from './events/Commute';
-// import Break from './events/Break';
 
 class Events extends Component {
     render(props) {

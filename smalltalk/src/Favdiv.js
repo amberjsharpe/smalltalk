@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { rebase }  from './base';
-import openheart from './images/openheart.png';
-import redheart from './images/redheart.jpg';
+import Openheart from './Openheart';
+import Fullheart from './Fullheart';
 import plus from './images/pluscircle.png';
 
 var user, question, FBFavObj, smallTalkId;
@@ -35,21 +35,20 @@ class Favdiv extends Component {
            userUID: user,
            question: question,
            smallTalkId: smallTalkId
-
         } 
         
         this.SaveObjToFB('favorites/', FBFavObj)
-        console.log("heart button clicked");
+        
+        
     } 
 
     render(props) {
-        console.log(this.props.id)
-        console.log(FBFavObj)
+
         return (
             <div className="backgroundTransparent pr-3 pl-3 mt-3">
                 <p className="pt-2">{this.props.q}</p>
-                <div>
-                    <img onClick={this.favoriteSmallTalk()} className="openheartBtn mr-2" src={openheart} alt="open heart" />
+                <div className="d-flex">
+                <Openheart favoriteSmallTalk={this.favoriteSmallTalk} SaveObjToFB={this.SaveObjToFB} props={this.props} />
                     <img className="plussignBtn" src={plus} alt="plus sign" />
                 </div>
             </div>
