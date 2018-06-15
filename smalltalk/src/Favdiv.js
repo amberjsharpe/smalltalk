@@ -5,10 +5,10 @@ import plus from './images/pluscircle.png';
 
 class Favdiv extends Component {
     render(props) {
-        console.log(this.props);
+        console.log(this.props)
         return (
             <div className="backgroundTransparent pr-3 pl-3 mt-3">
-                <p className="pt-2">test</p>
+                <p className="pt-2">{this.props.q}</p>
                 <div>
                     <img className="openheartBtn mr-2" src={openheart} alt="open heart" />
                     <img className="plussignBtn" src={plus} alt="plus sign" />
