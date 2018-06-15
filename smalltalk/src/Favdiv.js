@@ -4,7 +4,7 @@ import Openheart from './Openheart';
 import Fullheart from './Fullheart';
 import plus from './images/pluscircle.png';
 
-var user, question, FBFavObj, smallTalkId;
+var user, question, FBFavObj, smallTalkId, heart, fullheart;
 
 class Favdiv extends Component {
 
@@ -29,26 +29,35 @@ class Favdiv extends Component {
 
         user = this.props.user.uid;
         question = this.props.q;
-        smallTalkId = this.props.id
+        smallTalkId = this.props.id;
+        fullheart = this.props.fullheart;
 
         FBFavObj = {
            userUID: user,
            question: question,
-           smallTalkId: smallTalkId
+           smallTalkId: smallTalkId,
+           fullheart: fullheart
+
         } 
         
-        this.SaveObjToFB('favorites/', FBFavObj)
-        
-        
+        this.SaveObjToFB('favorites/', FBFavObj)     
     } 
 
     render(props) {
+
+        let heart;
+         
+       
+         heart = <Openheart favoriteSmallTalk={this.favoriteSmallTalk} SaveObjToFB={this.SaveObjToFB} props={this.props} />
+
+
+        console.log(this.props)
 
         return (
             <div className="backgroundTransparent pr-3 pl-3 mt-3">
                 <p className="pt-2">{this.props.q}</p>
                 <div className="d-flex">
-                <Openheart favoriteSmallTalk={this.favoriteSmallTalk} SaveObjToFB={this.SaveObjToFB} props={this.props} />
+                    {heart}
                     <img className="plussignBtn" src={plus} alt="plus sign" />
                 </div>
             </div>
