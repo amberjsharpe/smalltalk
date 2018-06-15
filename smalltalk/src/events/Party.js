@@ -50,8 +50,9 @@ class Party extends Component {
                     <div>
                         {console.log(this.state)}
                         {this.state.party.map((p, index ) => {
+                            console.log(p);
                             console.log(index);
-                            return <div><Favdiv key={p.id} state={this.state.party}/></div>
+                            return <div><Favdiv key={p.id} q={p.q}/></div>
                         })}
                     </div>
                 </div>
