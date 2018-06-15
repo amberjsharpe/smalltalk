@@ -34,19 +34,23 @@ class Party extends Component {
 
     render(props) {
         return(
-            <div>
+            <div className="d-flex flex-column">
                 <Header user={this.props.user} logout={this.props.logout}/>
-                <div className="d-flex pl-3">
+                <div>
+                    <div className="d-flex pl-3">
+                        <div>
+                            <img src={party} alt="party hat"/>
+                        </div>
+                        <div className="pt-3">
+                            <h2>Party</h2>
+                            <h6>SmallTalk</h6>
+                        </div>
+                </div>    
                     <div>
-                        <img src={party} alt="party hat"/>
+                        {this.state.party.map(p => {
+                            return <div key={p.id}><Favdiv question={p.q} /></div>
+                        })}
                     </div>
-                    <div className="pt-3">
-                        <h2>Party</h2>
-                        <h6>SmallTalk</h6>
-                    </div>
-                    {this.state.party.map(p => {
-                        return <div key={p.id}><Favdiv question={p.q} /></div>
-                    })}
                 </div>
             </div>
         )
