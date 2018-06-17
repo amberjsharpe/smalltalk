@@ -5,7 +5,7 @@ class Fullheart extends Component {
     render() {
         return(
             <div>
-                <img src={redheart} alt="redheart" />
+                <img className="fullheartBtn" src={redheart} alt="redheart" />
             </div>
         )
     }
