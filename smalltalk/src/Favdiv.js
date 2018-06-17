@@ -63,9 +63,9 @@ class Favdiv extends Component {
           heart = <Openheart favoriteSmallTalk={this.favoriteSmallTalk} SaveObjToFB={this.SaveObjToFB} props={this.props} />
         }
         return (
-            <div className="backgroundTransparent pr-3 pl-3 mt-3">
+            <div className="backgroundTransparent pr-3 pb-2 pl-3 mt-3">
                 <p className="pt-2">{this.props.q}</p>
-                <div>
+                <div className="d-flex justify-content-between">
                     <div>{heart}</div>
                     <img className="plussignBtn" src={plus} alt="plus sign" />
                 </div>
