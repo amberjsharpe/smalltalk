@@ -6,14 +6,14 @@ import './logo.css';
 import './button.css';
 import './user.css';
 
-class Header extends Component {
+class Eventheader extends Component {
 
 
     render(props) {
         return(
             <div className="pt-4 pr-4 pl-4">
                 <header className="d-flex justify-content-between header">
-                    <NavLink to="/user"><img src={back} alt="logo"/></NavLink>
+                    <NavLink to="/events"><img src={back} alt="logo"/></NavLink>
                     <div>
                     <NavLink to="/user"><img className="userHeader" src={this.props.user.photoURL} alt="user"/></NavLink>
                     <h5 onClick={this.props.logout} className="pl-2">LOGOUT</h5>
@@ -27,4 +27,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default Eventheader

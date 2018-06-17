@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { rebase }  from '../base';
-import Header from '../Header';
+import Eventheader from '../Eventheader';
 import Favdiv from '../Favdiv';
 import party from '../images/party.png';
 import './events.css';
@@ -66,7 +66,7 @@ class Party extends Component {
     render() {
         return(
             <div className="d-flex flex-column">
-                <Header user={this.props.user} logout={this.props.logout}/>
+                <Eventheader user={this.props.user} logout={this.props.logout}/>
                 <div>
                     <div className="d-flex pl-3">
                         <div>
