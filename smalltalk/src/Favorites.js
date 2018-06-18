@@ -13,6 +13,8 @@ class Favorites extends Component {
        this.state = {
            favorites: ''
         }
+
+        this.deleteItem = this.deleteItem.bind(this);
    }
 
     GetFromFB (endpoint){
@@ -27,9 +29,24 @@ class Favorites extends Component {
             })
       }
 
-      componentDidMount() {
-          this.GetFromFB('favorites');
-      }
+    deleteItem(endpoint, fbId) {
+        this.DeleteFromFB(endpoint, fbId);
+    }
+
+    DeleteFromFB (endpoint, fbID) {     
+        const url = `${endpoint}/${fbID}`;
+
+        return rebase.remove(url).then((res) => {
+            const remaining = this.state.favorites.filter(k => k.key !== fbID);
+            this.setState({
+                favorites: remaining
+            })
+        })
+    }
+
+    componentDidMount() {
+        this.GetFromFB('favorites');
+    }
 
     render(props) {
         const favs = this.state.favorites;
@@ -45,11 +62,12 @@ class Favorites extends Component {
                     <h2>FAVORITES</h2>
                 </button>
                 {favs.map((f, i) => {
+                    console.log(f)
                     return <div key={i} className="backgroundTransparent pr-3 pb-2 pl-3 mt-3">
                         <p className="pt-2">{f.question}</p>
                         <div className="d-flex justify-content-between">
                             <img className="plussignBtn" src={plus} alt="plus sign" />
-                            <img className="deleteBtn" src={deletebtn} alt="delete" />
+                            <img onClick={() => {this.deleteItem('favorites', f.key)}} className="deleteBtn" src={deletebtn} alt="delete" />
                         </div>
                     </div>
                 })}
