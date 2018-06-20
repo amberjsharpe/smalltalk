@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import Eventheader from '../Eventheader';
 import coffee from '../images/coffee.png';
 import './events.css';
+import { getFromFb } from './db-interactions';
 
 class Break extends Component {
+
+    componentDidMount() {
+        getFromFb('break').then(res => {
+            console.log(res)
+        })
+    }
+
     render(props) {
         return(
             <div>

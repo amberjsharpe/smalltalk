@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import Eventheader from '../Eventheader';
 import champagne from '../images/champagne.png';
 import './events.css';
+import { getFromFb } from './db-interactions';
 
 class Date extends Component {
+
+    componentDidMount() {
+        getFromFb('date').then(res => {
+            console.log(res)
+        })
+    }
+
     render(props) {
         return(
             <div>

@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import Eventheader from '../Eventheader';
 import train from '../images/train.png';
 import './events.css';
+import { getFromFb } from './db-interactions';
 
 class Commute extends Component {
+
+    componentDidMount() {
+        getFromFb('commute').then(res => {
+            console.log(res)
+        })
+    }
+
     render(props) {
         return(
             <div>

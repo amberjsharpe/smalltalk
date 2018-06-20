@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import Eventheader from '../Eventheader';
 import family from '../images/family.png';
 import './events.css';
+import { getFromFb } from './db-interactions';
 
 class Family extends Component {
+
+    componentDidMount() {
+        getFromFb('family').then(res => {
+            console.log(res)
+        })
+    }
+
     render(props) {
         return(
             <div>

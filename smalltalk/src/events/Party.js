@@ -4,6 +4,8 @@ import Eventheader from '../Eventheader';
 import Favdiv from '../Favdiv';
 import party from '../images/party.png';
 import './events.css';
+import { getFromFb } from './db-interactions';
+
 class Party extends Component {
     constructor(props) {
         super(props);
@@ -13,23 +15,14 @@ class Party extends Component {
         }
     }
     componentDidMount() {
-        this.getFromFb('party').then(res => {
+        getFromFb('party').then(res => {
             res.forEach(obj => {
                 obj.heart = false;
             })
             this.setState({party: res});
         })
     }
-    getFromFb(endpoint){
-        return rebase.fetch(endpoint, {
-            context: this,
-            asArray: true, 
-            then(data) {
-                let myObj = JSON.stringify(data);
-                return myObj;
-            }
-        })
-    }
+
     toggleHeart = (id) => {
         let newParty = [];
         this.state.party.forEach((q, i) => {

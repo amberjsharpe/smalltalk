@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+import { rebase }  from '../base';
 import Eventheader from '../Eventheader';
+import Favdiv from '../Favdiv';
 import network from '../images/network.png';
 import './events.css';
+import { getFromFb } from './db-interactions';
 
 class Network extends Component {
+
+    componentDidMount() {
+        getFromFb('networking').then(res => {
+            console.log(res)
+        })
+    }
+
     render(props) {
         return(
             <div>
