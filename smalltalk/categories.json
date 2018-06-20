@@ -2,24 +2,156 @@
     {
         "party": [
             {
-            	"id": "pq1", 
+            	"id": "q1", 
             	"q": "What’s the most out-of-character thing you’ve ever done?"
             },
             {
-                "id": "pq2",
+                "id": "q2",
                 "q": "What do you wish you had placed in a time capsule 15 years ago?"
             },
             {
-                "id": "pq3",
+                "id": "q3",
                 "q": "If you could teach a college course on any subject you want, what would it be?"
             },
             {
-                "id": "pq4",
+                "id": "q4",
                 "q": "What would be your ideal superpower?"
             },
             {
-                "id": "pq5",
+                "id": "q5",
                 "q": "What’s the strangest compliment you’ve ever gotten?"
+            },
+            {
+                "id": "q6",
+                "q": "If you could only eat one thing for the rest of your life, what would it be?"
+            },
+            {
+                "id": "q7",
+                "q": "What’s the craziest thing a boss has ever asked you to do?"
+            },
+            {
+                "id": "q8",
+                "q": "What was your first job? Did you like it?"
+            },
+            {
+                "id": "q9",
+                "q": "Where did you live before this?"
+            },
+            {
+                "id": "q10",
+                "q": "What’s the best piece of advice you’ve ever received?"
+            }
+
+        ],
+            "networking": [
+            {
+                "id": "q11", 
+                "q": "Excuse me. Do you know how much a polar bear weighs?"
+            },
+            {
+                "id": "q12",
+                "q": "What a beautiful venue. Have you been here before?"
+            },
+            {
+                "id": "q13",
+                "q": "Did you catch the game last night?"
+            },
+            {
+                "id": "q14",
+                "q": "Man, these networking events can be so crazy. Mind if I join you over here where it’s a little quieter?"
+            },
+            {
+                "id": "q15",
+                "q": "What are you passionate about?"
+            }
+        ],
+
+            "date": [
+            {
+                "id": "q16", 
+                "q": "What’s the last trip you took?"
+            },
+            {
+                "id": "q17",
+                "q": "What’s something you’ve always wanted to try?"
+            },
+            {
+                "id": "q18",
+                "q": "Do you have any dating horror stories?"
+            },
+            {
+                "id": "q19",
+                "q": "What’s the last thing you Googled?"
+            },
+            {
+                "id": "q20",
+                "q": "Are you a coffee junkie?"
+            }
+        ],
+            "family": [
+            {
+                "id": "q21", 
+                "q": "What’s your life-long dream?"
+            },
+            {
+                "id": "q22",
+                "q": "Would you rather be totally weird and awkward or completely unremarkable?"
+            },
+            {
+                "id": "q23",
+                "q": "What family member do you think you resemble the most?"
+            },
+            {
+                "id": "q24",
+                "q": "If you could travel anywhere in the world, where would it be?"
+            },
+            {
+                "id": "q25",
+                "q": "What’s your idea of a perfect day?"
+            }
+        ],
+            "break": [
+            {
+                "id": "q26", 
+                "q": "Traffic was crazy today! How was your commute?"
+            },
+            {
+                "id": "q27",
+                "q": "On a scale of 1 to undrinkable, how is the coffee today?"
+            },
+            {
+                "id": "q28",
+                "q": "Did you catch the game last night?"
+            },
+            {
+                "id": "q29",
+                "q": "How are things going over at the _____ department today?"
+            },
+            {
+                "id": "q30",
+                "q": "Any fun plans for after work?"
+            }
+        ],
+            "commute": [
+            {
+                "id": "q31", 
+                "q": "What’s the weirdest food that you’ve ever eaten?"
+            },
+            {
+                "id": "q32",
+                "q": "Have any fun weekend plans?"
+            },
+            {
+                "id": "q33",
+                "q": "Did you catch the game last night?"
+            },
+            {
+                "id": "q34",
+                "q": "Where’s the last place that you traveled?"
+            },
+            {
+                "id": "q35",
+                "q": "What is your biggest pet peeve?"
             }
         ]
     }

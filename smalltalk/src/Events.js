@@ -18,7 +18,7 @@ class Events extends Component {
                     <h3 className="pt-3 pb-3">Where are you going?</h3>
                     <div className="d-flex flex-wrap justify-content-around">
                         <Link to="/events/party"><Categorybtn src={party} alt="party hat" category="Party"  /></Link>
-                        <Categorybtn src={network} alt="circles connected by lines" category="Networking Event"/>
+                        <Link to="/events/network"><Categorybtn src={network} alt="circles connected by lines" category="Networking Event"/></Link>
                         <Categorybtn src={champagne} alt="champagne" category="Date"/>
                         <Categorybtn src={family} alt="family" category="Family Gathering"/>
                         <Categorybtn src={coffee} alt="coffee pot" category="Break Room"/>
