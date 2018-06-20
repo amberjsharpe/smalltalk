@@ -23,6 +23,10 @@ class Network extends Component {
         })
     }
 
+    checkState = () => {
+        console.log(this.state)
+    }
+
     render(props) {
         return(
             <div>
@@ -37,7 +41,7 @@ class Network extends Component {
                     </div>
                 </div>
                 <div>
-                    {this.state.network.map((n) => {
+                    {this.state.network.map((n, i) => {
                         return <Favdiv key={n.id} q={n.q} user={this.props.user} id={n.id} />
                     })}
                 </div>
