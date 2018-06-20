@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { rebase }  from '../base';
 import Eventheader from '../Eventheader';
 import Favdiv from '../Favdiv';
 import network from '../images/network.png';
@@ -8,9 +7,19 @@ import { getFromFb } from './db-interactions';
 
 class Network extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            network: [],
+            heart: false
+        }
+    }
+
     componentDidMount() {
         getFromFb('networking').then(res => {
             console.log(res)
+            this.setState({network: res});
         })
     }
 
@@ -26,6 +35,11 @@ class Network extends Component {
                         <h3>Networking Event</h3>
                         <h6>SmallTalk</h6>
                     </div>
+                </div>
+                <div>
+                    {this.state.network.map((n) => {
+                        return <Favdiv key={n.id} q={n.q} user={this.props.user} id={n.id} />
+                    })}
                 </div>
             </div>
         )

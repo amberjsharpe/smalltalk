@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
 import Eventheader from '../Eventheader';
+import Favdiv from '../Favdiv';
 import family from '../images/family.png';
 import './events.css';
 import { getFromFb } from './db-interactions';
 
 class Family extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            family: [],
+            heart: false
+        }
+    }
+
     componentDidMount() {
         getFromFb('family').then(res => {
             console.log(res)
+            this.setState({family: res});
         })
     }
 
@@ -25,6 +36,9 @@ class Family extends Component {
                         <h6>SmallTalk</h6>
                     </div>
                 </div>
+                {this.state.family.map((f) => {
+                    return <Favdiv key={f.id} q={f.q} user={this.props.user} id={f.id} />
+                })}
             </div>
         )
     }
