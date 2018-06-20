@@ -7,6 +7,10 @@ import Events from './Events';
 import Favorites from './Favorites';
 import Party from './events/Party';
 import Network from './events/Network';
+import Family from './events/Family';
+import Date from './events/Date';
+import Commute from './events/Commute';
+import Break from './events/Break';
 import Userevents from './Userevents';
 import './App.css';
 import './logo.css';
@@ -89,6 +93,10 @@ class App extends Component {
             <Route exact path="/user" component={() => <User user={this.state.user} logout={this.logout} />}/>
             <Route exact path="/events/party" component={() => <Party user={this.state.user} logout={this.state.logout} />}  />
             <Route exact path="/events/network" component={() => <Network user={this.state.user} logout={this.state.logout} />}  />
+            <Route exact path="/events/family" component={() => <Family user={this.state.user} logout={this.state.logout} />}  />
+            <Route exact path="/events/date" component={() => <Date user={this.state.user} logout={this.state.logout} />}  />
+            <Route exact path="/events/commute" component={() => <Commute user={this.state.user} logout={this.state.logout} />}  />
+            <Route exact path="/events/break" component={() => <Break user={this.state.user} logout={this.state.logout} />}  />
             <Route exact path="/user/favorites" component={() => <Favorites user={this.state.user} logout={this.logout} />}/>
             <Route exact path="/user/events" component={() => <Userevents user={this.state.user} logout={this.logout} />}/>
         </div>

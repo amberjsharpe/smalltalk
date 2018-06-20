@@ -17,12 +17,24 @@ class Events extends Component {
                 <div className="d-flex flex-column align-items-center">
                     <h3 className="pt-3 pb-3">Where are you going?</h3>
                     <div className="d-flex flex-wrap justify-content-around">
-                        <Link to="/events/party"><Categorybtn src={party} alt="party hat" category="Party"  /></Link>
-                        <Link to="/events/network"><Categorybtn src={network} alt="circles connected by lines" category="Networking Event"/></Link>
-                        <Categorybtn src={champagne} alt="champagne" category="Date"/>
-                        <Categorybtn src={family} alt="family" category="Family Gathering"/>
-                        <Categorybtn src={coffee} alt="coffee pot" category="Break Room"/>
-                        <Categorybtn src={train} alt="light rail train" category="Morning Commute"/>
+                        <Link to="/events/party">
+                            <Categorybtn src={party} alt="party hat" category="Party"  />
+                        </Link>
+                        <Link to="/events/network">
+                            <Categorybtn src={network} alt="circles connected by lines" category="Networking"/>
+                        </Link>
+                        <Link to="/events/date">
+                            <Categorybtn src={champagne} alt="champagne" category="Date"/>
+                        </Link>
+                        <Link to="/events/family">
+                            <Categorybtn src={family} alt="family" category="Family Gathering"/>
+                        </Link>
+                        <Link to="/events/break">
+                            <Categorybtn src={coffee} alt="coffee pot" category="Break Room"/>
+                        </Link>
+                        <Link to="/events/commute">
+                            <Categorybtn src={train} alt="light rail train" category="Morning Commute"/>
+                        </Link>
                     </div>
                 </div>
             </div>

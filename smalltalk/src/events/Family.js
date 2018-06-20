@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from '../Header';
+import Eventheader from '../Eventheader';
 import family from '../images/family.png';
 import './events.css';
 
@@ -7,7 +7,7 @@ class Family extends Component {
     render(props) {
         return(
             <div>
-                <Header user={this.props.user} logout={this.props.logout}/>
+                <Eventheader user={this.props.user} logout={this.props.logout}/>
                 <div className="d-flex pl-3">
                     <div>
                         <img src={family} alt="family"/>
