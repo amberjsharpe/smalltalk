@@ -3,25 +3,10 @@ import { rebase }  from './base';
 import Openheart from './Openheart';
 import Fullheart from './Fullheart';
 import plus from './images/pluscircle.png';
+import { SaveObjToFB } from './events/db-interactions';
 
 var user, question, FBFavObj, smallTalkId, heart;
 class Favdiv extends Component {
-    SaveObjToFB ( endpoint, objToSave ) { 
-
-    return rebase.push(endpoint, {
-      data: objToSave, 
-        then(err) {
-          if(err) {
-            console.log("error", err);
-          } else if (!err) {
-
-          }
-        }
-      })
-      .then((result) => {
-        return result;
-      })
-    }
 
     favoriteSmallTalk() {
 
@@ -37,7 +22,7 @@ class Favdiv extends Component {
         } 
 
         this.props.toggleHeart(smallTalkId);
-        this.SaveObjToFB('favorites', FBFavObj)
+        SaveObjToFB('favorites', FBFavObj)
     } 
     
     render() {

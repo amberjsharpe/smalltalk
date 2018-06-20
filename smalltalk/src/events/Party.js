@@ -35,6 +35,7 @@ class Party extends Component {
             this.setState({party: newParty}, this.checkState)
         })
     }
+    
     checkState = () => {
         console.log(this.state)
     }

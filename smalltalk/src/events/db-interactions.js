@@ -10,3 +10,20 @@ export function getFromFb(endpoint){
         }
     })
 }
+
+export function SaveObjToFB ( endpoint, objToSave ) { 
+
+    return rebase.push(endpoint, {
+      data: objToSave, 
+        then(err) {
+          if(err) {
+            console.log("error", err);
+          } else if (!err) {
+
+          }
+        }
+      })
+      .then((result) => {
+        return result;
+      })
+    }
