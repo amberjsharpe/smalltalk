@@ -5,7 +5,7 @@ class Fullheart extends Component {
     render() {
         return(
             <div>
-                <img className="fullheartBtn" src={redheart} alt="redheart" />
+                <img onClick={() => {this.props.removeFavorite()}} className="fullheartBtn" src={redheart} alt="redheart" />
             </div>
         )
     }

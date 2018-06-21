@@ -22,23 +22,7 @@ class Party extends Component {
             this.setState({party: res});
         })
     }
-
-    toggleHeart = (id) => {
-        let newParty = [];
-        this.state.party.forEach((q, i) => {
-            if(q.id === id){
-                q.heart = !this.state.party[i].heart;
-                newParty.push(q);
-            } else {
-                newParty.push(q);
-            }
-            this.setState({party: newParty}, this.checkState)
-        })
-    }
     
-    checkState = () => {
-        console.log(this.state)
-    }
     render() {
         return(
             <div className="d-flex flex-column">
@@ -55,7 +39,7 @@ class Party extends Component {
                 </div>    
                     <div>
                         {this.state.party.map((p, i ) => {
-                            return <Favdiv heart={this.state.party[i].heart} toggleHeart={this.toggleHeart} key={p.id} q={p.q} user={this.props.user} id={p.id} />
+                            return <Favdiv heart={this.state.party[i].heart} key={p.id} q={p.q} user={this.props.user} id={p.id} />
                         })}
                     </div>
                 </div>

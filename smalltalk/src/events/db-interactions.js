@@ -12,7 +12,6 @@ export function getFromFb(endpoint){
 }
 
 export function SaveObjToFB ( endpoint, objToSave ) { 
-
     return rebase.push(endpoint, {
       data: objToSave, 
         then(err) {
@@ -27,3 +26,12 @@ export function SaveObjToFB ( endpoint, objToSave ) {
         return result;
       })
     }
+
+
+export function DeleteFromFB (endpoint, fbID) {     
+    const url = `${endpoint}/${fbID}`;
+
+    return rebase.remove(url).then(res => { 
+        return res; 
+    });
+}
